@@ -1,0 +1,12 @@
+import axios from "axios";
+
+const BASE_URL = "https://hiresprintcanvas.dreamhosters.com";
+const TOKEN = process.env.TOKEN;
+
+export const INSTANCE_API = axios.create({
+  baseURL: BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${TOKEN}`,
+  },
+});
